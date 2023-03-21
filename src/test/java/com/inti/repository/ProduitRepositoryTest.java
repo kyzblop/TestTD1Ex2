@@ -49,7 +49,7 @@ public class ProduitRepositoryTest {
 		
 		// When
 		ipr.deleteById(p2.getId());
-		
+		// truc
 		// Then
 		Assertions.assertThrows(Exception.class, () -> ipr.getReferenceById(p2.getId()));
 
