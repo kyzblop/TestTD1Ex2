@@ -46,7 +46,7 @@ public class ProduitRepositoryTest {
 	public void delete() {
 		// Given (deja dans le setUp)
 		Produit p2 = ipr.save(p);
-		
+		 
 		// When
 		ipr.deleteById(p2.getId());
 		
