@@ -41,7 +41,7 @@ public class ProduitRepositoryTest {
 		assertThat(savedProduct.getId()).isGreaterThan(0);
 		assertThat(savedProduct.getNom()).isEqualTo("Samsung");
 	}
-	
+	// commentaire
 	@Test
 	public void delete() {
 		// Given (deja dans le setUp)
