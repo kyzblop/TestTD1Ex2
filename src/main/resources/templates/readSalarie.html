@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Read Salaire</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">id</th>
+				<th scope="col">Nom</th>
+				<th scope="col">Prenom</th>
+				<th scope="col">Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="salarie : ${listeS}">
+				<th scope="row" th:text="${salarie.id}"></th>
+				<td th:text="${salarie.nom}"></td>
+				<td th:text="${salarie.prenom}"></td>
+				<td th:text="${salarie.email}"></td>
+
+				<td><a th:href="'update/' + ${salarie.id}">
+						<button type="button" class="btn btn-outline-primary">Modifier</button>
+				</a></td>
+				<td><a th:href="'delete/' + ${salarie.id}">
+						<button type="button" class="btn btn-outline-primary">Supprimer</button>
+				</a></td>
+			</tr>
+
+		</tbody>
+	</table>
+</body>
+</html>
