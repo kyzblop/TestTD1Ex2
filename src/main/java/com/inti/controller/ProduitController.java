@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.inti.repository.IProduitRepository;
-// truc
+
 @Controller
 public class ProduitController {
 	

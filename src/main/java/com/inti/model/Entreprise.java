@@ -1,5 +1,7 @@
 package com.inti.model;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +22,6 @@ public class Entreprise {
 	private String nom;
 	private String adresse;
 	
-//	@OneToMany
-//	Salarie salarie;
+	@OneToMany(mappedBy = "entreprise")
+	List<Salarie>  listSalarie;
 }

@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 
@@ -27,6 +29,10 @@ public class Salarie {
 	private String nom;
 	private String prenom;
 	private String email;
+	
+	@ManyToOne
+	@JoinColumn(name = "idE")
+	Entreprise entreprise;
 	
 	public Salarie(String nom, String prenom, String email) {
 		super();
