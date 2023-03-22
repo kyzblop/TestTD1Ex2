@@ -24,4 +24,12 @@ public class Entreprise {
 	
 	@OneToMany(mappedBy = "entreprise")
 	List<Salarie>  listSalarie;
+
+	public Entreprise(String nom, String adresse) {
+		super();
+		this.nom = nom;
+		this.adresse = adresse;
+	}
+	
+	
 }
