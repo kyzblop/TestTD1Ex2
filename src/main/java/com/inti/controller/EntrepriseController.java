@@ -30,7 +30,7 @@ public class EntrepriseController {
 		ier.save(e);
 		return "redirect:/entreprise/create";
 	}
-	
+	 
 	@GetMapping("read")
 	public String readForm(Model m) {
 		List<Entreprise> listeE = ier.findAll();
